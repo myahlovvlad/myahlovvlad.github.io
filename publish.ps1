@@ -40,13 +40,7 @@ if ($hasOrigin) {
 }
 
 if (-not $remote) {
-  gh repo view $repo *> $null
-  if ($LASTEXITCODE -eq 0) {
-    Invoke-Checked git remote add origin "https://github.com/$repo.git"
-    Invoke-Checked git push -u origin main
-  } else {
-    Invoke-Checked gh repo create $repo --public --description "Professional biography and selected scientific software engineering cases" --source . --remote origin --push
-  }
+  Invoke-Checked gh repo create $repo --public --description "Professional biography and selected scientific software engineering cases" --source . --remote origin --push
 } else {
   Invoke-Checked git push -u origin main
 }
