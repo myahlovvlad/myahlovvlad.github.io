@@ -33,7 +33,12 @@ if ($pending) {
   Invoke-Checked git commit -m "Update professional biography landing page"
 }
 
-$remote = git remote get-url origin 2>$null
+$remote = $null
+$hasOrigin = (git remote) -contains "origin"
+if ($hasOrigin) {
+  $remote = git remote get-url origin
+}
+
 if (-not $remote) {
   gh repo view $repo *> $null
   if ($LASTEXITCODE -eq 0) {
