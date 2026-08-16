@@ -43,3 +43,7 @@ The primary identity is industrial scientific-instrument engineering, not generi
 - Keep research projects separate from production claims.
 - Never expose proprietary code, firmware binaries, vendor confidential information or decompiled sources.
 - Every strong claim should have an explicit evidence source or conservative wording.
+
+## Review previews
+
+Pull requests are published to an isolated GitHub Pages path under `pr-preview/pr-<number>/`. The production root remains sourced from `main`, while preview directories are updated automatically on PR commits and removed when the PR closes.
