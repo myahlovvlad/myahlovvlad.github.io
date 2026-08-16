@@ -1,0 +1,9 @@
+{
+  "name": "Vlad Myahlov — Scientific Software & Instrumentation Engineer",
+  "short_name": "Vlad Myahlov",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#f3f1ea",
+  "theme_color": "#f3f1ea",
+  "icons": [{"src":"assets/favicon.svg","sizes":"any","type":"image/svg+xml"}]
+}
