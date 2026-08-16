@@ -1,53 +1,83 @@
 (() => {
   const root = document.documentElement;
-  const languageButtons = document.querySelectorAll('[data-language]');
-  const themeToggle = document.getElementById('theme-toggle');
-  const savedLanguage = localStorage.getItem('portfolio-language');
-  const savedTheme = localStorage.getItem('portfolio-theme');
-  const preferredLanguage = navigator.language.toLowerCase().startsWith('ru') ? 'ru' : 'en';
-  const preferredTheme = matchMedia('(prefers-color-scheme: light)').matches ? 'light' : 'dark';
+  const languageButtons = [...document.querySelectorAll("[data-language]")];
+  const translatable = [...document.querySelectorAll("[data-en][data-ru]")];
+  const themeToggle = document.getElementById("theme-toggle");
+  const year = document.getElementById("year");
+  const heroSystem = document.getElementById("hero-system");
 
-  function applyLanguage(language) {
-    root.lang = language;
-    document.querySelectorAll('[data-en][data-ru]').forEach((element) => {
-      element.textContent = element.dataset[language];
+  const storedLanguage = localStorage.getItem("portfolio-language");
+  const browserLanguage = navigator.language?.toLowerCase().startsWith("ru") ? "ru" : "en";
+  const initialLanguage = storedLanguage || browserLanguage;
+
+  function setLanguage(language) {
+    const lang = language === "ru" ? "ru" : "en";
+    root.lang = lang;
+    translatable.forEach((node) => {
+      node.textContent = node.dataset[lang];
     });
     languageButtons.forEach((button) => {
-      button.classList.toggle('active', button.dataset.language === language);
-      button.setAttribute('aria-pressed', button.dataset.language === language ? 'true' : 'false');
+      button.classList.toggle("active", button.dataset.language === lang);
+      button.setAttribute("aria-pressed", String(button.dataset.language === lang));
     });
-    document.title = language === 'ru'
-      ? 'Влад Мяхлов — системный инженер научных систем'
-      : 'Vlad Myahlov — Scientific Systems Engineer';
-    localStorage.setItem('portfolio-language', language);
-  }
-
-  function applyTheme(theme) {
-    root.dataset.theme = theme;
-    themeToggle.setAttribute('aria-label', theme === 'dark' ? 'Switch to light theme' : 'Switch to dark theme');
-    localStorage.setItem('portfolio-theme', theme);
+    document.title = lang === "ru"
+      ? "Влад Мяхлов — инженер научного и приборного ПО"
+      : "Vlad Myahlov — Scientific Software & Instrumentation Engineer";
+    localStorage.setItem("portfolio-language", lang);
   }
 
   languageButtons.forEach((button) => {
-    button.addEventListener('click', () => applyLanguage(button.dataset.language));
+    button.addEventListener("click", () => setLanguage(button.dataset.language));
   });
 
-  themeToggle.addEventListener('click', () => {
-    applyTheme(root.dataset.theme === 'dark' ? 'light' : 'dark');
-  });
+  const storedTheme = localStorage.getItem("portfolio-theme");
+  const initialTheme = storedTheme || "light";
+  root.dataset.theme = initialTheme;
 
-  applyTheme(savedTheme || preferredTheme);
-  applyLanguage(savedLanguage || preferredLanguage);
-
-  const observer = new IntersectionObserver((entries) => {
-    entries.forEach((entry) => {
-      if (entry.isIntersecting) {
-        entry.target.classList.add('visible');
-        observer.unobserve(entry.target);
-      }
+  if (themeToggle) {
+    themeToggle.addEventListener("click", () => {
+      const nextTheme = root.dataset.theme === "dark" ? "light" : "dark";
+      root.dataset.theme = nextTheme;
+      localStorage.setItem("portfolio-theme", nextTheme);
     });
-  }, { threshold: 0.08 });
+  }
 
-  document.querySelectorAll('.reveal').forEach((element) => observer.observe(element));
-  document.getElementById('year').textContent = new Date().getFullYear();
+  if (year) year.textContent = new Date().getFullYear();
+
+  const revealTargets = [
+    ...document.querySelectorAll(".section-heading, .principle-card, .case-row, .open-source-copy, .tool-console, .research-grid article, .contact-grid > *, .trajectory-track")
+  ];
+  revealTargets.forEach((node) => node.setAttribute("data-reveal", ""));
+
+  if ("IntersectionObserver" in window) {
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach((entry) => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add("is-visible");
+          observer.unobserve(entry.target);
+        }
+      });
+    }, { threshold: 0.12, rootMargin: "0px 0px -8% 0px" });
+
+    revealTargets.forEach((node) => observer.observe(node));
+  } else {
+    revealTargets.forEach((node) => node.classList.add("is-visible"));
+  }
+
+  const reducedMotion = window.matchMedia("(prefers-reduced-motion: reduce)");
+  if (heroSystem && !reducedMotion.matches) {
+    heroSystem.addEventListener("pointermove", (event) => {
+      const rect = heroSystem.getBoundingClientRect();
+      const x = (event.clientX - rect.left) / rect.width - 0.5;
+      const y = (event.clientY - rect.top) / rect.height - 0.5;
+      heroSystem.style.setProperty("--ry", `${x * 5.5}deg`);
+      heroSystem.style.setProperty("--rx", `${-y * 4}deg`);
+    });
+    heroSystem.addEventListener("pointerleave", () => {
+      heroSystem.style.setProperty("--ry", "0deg");
+      heroSystem.style.setProperty("--rx", "0deg");
+    });
+  }
+
+  setLanguage(initialLanguage);
 })();
