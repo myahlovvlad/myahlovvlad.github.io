@@ -1,0 +1,181 @@
+name: Publish PR preview
+
+on:
+  pull_request:
+    types: [opened, reopened, synchronize, closed]
+
+permissions:
+  contents: write
+  pull-requests: write
+
+concurrency:
+  group: pr-preview-${{ github.event.number }}
+  cancel-in-progress: true
+
+env:
+  PREVIEW_ROOT: pr-preview
+  PREVIEW_URL_BASE: https://myahlovvlad.github.io
+
+jobs:
+  publish:
+    if: github.event.action != 'closed' && github.event.pull_request.head.repo.full_name == github.repository
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout publishing branch
+        uses: actions/checkout@v6
+        with:
+          ref: main
+          path: site
+          fetch-depth: 0
+
+      - name: Checkout pull request revision
+        uses: actions/checkout@v6
+        with:
+          ref: ${{ github.event.pull_request.head.sha }}
+          path: preview-source
+          persist-credentials: false
+
+      - name: Stage isolated preview
+        env:
+          PR_NUMBER: ${{ github.event.number }}
+        run: |
+          set -euo pipefail
+          target="site/${PREVIEW_ROOT}/pr-${PR_NUMBER}"
+          rm -rf "$target"
+          mkdir -p "$target"
+
+          rsync -a --delete \
+            --exclude='.git/' \
+            --exclude='.github/' \
+            --exclude='docs/' \
+            --exclude='source-material/' \
+            --exclude='pr-preview/' \
+            preview-source/ "$target"/
+
+          touch "$target/.nojekyll"
+
+      - name: Commit preview to Pages source branch
+        env:
+          PR_NUMBER: ${{ github.event.number }}
+        run: |
+          set -euo pipefail
+          cd site
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add "${PREVIEW_ROOT}/pr-${PR_NUMBER}"
+
+          if git diff --cached --quiet; then
+            echo "Preview is already current."
+            exit 0
+          fi
+
+          git commit -m "chore: update PR #${PR_NUMBER} preview"
+          git push origin HEAD:main || {
+            git pull --rebase origin main
+            git push origin HEAD:main
+          }
+
+      - name: Add or update preview link on PR
+        env:
+          GH_TOKEN: ${{ github.token }}
+          PR_NUMBER: ${{ github.event.number }}
+          REPOSITORY: ${{ github.repository }}
+          COMMIT_SHA: ${{ github.event.pull_request.head.sha }}
+        run: |
+          set -euo pipefail
+          preview_url="${PREVIEW_URL_BASE}/${PREVIEW_ROOT}/pr-${PR_NUMBER}/"
+          marker='<!-- portfolio-preview -->'
+          body="${marker}
+          ### Landing preview
+
+          Preview: ${preview_url}
+
+          Revision: \`${COMMIT_SHA}\`
+
+          The preview updates on every commit to this PR and is removed when the PR is closed."
+
+          api="https://api.github.com/repos/${REPOSITORY}/issues/${PR_NUMBER}/comments"
+          comments="$(curl -fsSL \
+            -H "Authorization: Bearer ${GH_TOKEN}" \
+            -H "Accept: application/vnd.github+json" \
+            -H "X-GitHub-Api-Version: 2022-11-28" \
+            "$api")"
+          comment_id="$(printf '%s' "$comments" | jq -r --arg marker "$marker" '.[] | select(.body | contains($marker)) | .id' | head -n1)"
+          payload="$(jq -n --arg body "$body" '{body: $body}')"
+
+          if [ -n "$comment_id" ] && [ "$comment_id" != "null" ]; then
+            curl -fsSL -X PATCH \
+              -H "Authorization: Bearer ${GH_TOKEN}" \
+              -H "Accept: application/vnd.github+json" \
+              -H "X-GitHub-Api-Version: 2022-11-28" \
+              "https://api.github.com/repos/${REPOSITORY}/issues/comments/${comment_id}" \
+              -d "$payload" >/dev/null
+          else
+            curl -fsSL -X POST \
+              -H "Authorization: Bearer ${GH_TOKEN}" \
+              -H "Accept: application/vnd.github+json" \
+              -H "X-GitHub-Api-Version: 2022-11-28" \
+              "$api" \
+              -d "$payload" >/dev/null
+          fi
+
+  cleanup:
+    if: github.event.action == 'closed'
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout publishing branch
+        uses: actions/checkout@v6
+        with:
+          ref: main
+          fetch-depth: 0
+
+      - name: Remove preview
+        env:
+          PR_NUMBER: ${{ github.event.number }}
+        run: |
+          set -euo pipefail
+          target="${PREVIEW_ROOT}/pr-${PR_NUMBER}"
+          if [ ! -e "$target" ]; then
+            echo "No preview directory to remove."
+            exit 0
+          fi
+
+          rm -rf "$target"
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add -A "$target"
+          git commit -m "chore: remove PR #${PR_NUMBER} preview"
+          git push origin HEAD:main || {
+            git pull --rebase origin main
+            git push origin HEAD:main
+          }
+
+      - name: Mark preview as removed on PR
+        env:
+          GH_TOKEN: ${{ github.token }}
+          PR_NUMBER: ${{ github.event.number }}
+          REPOSITORY: ${{ github.repository }}
+        run: |
+          set -euo pipefail
+          marker='<!-- portfolio-preview -->'
+          api="https://api.github.com/repos/${REPOSITORY}/issues/${PR_NUMBER}/comments"
+          comments="$(curl -fsSL \
+            -H "Authorization: Bearer ${GH_TOKEN}" \
+            -H "Accept: application/vnd.github+json" \
+            -H "X-GitHub-Api-Version: 2022-11-28" \
+            "$api")"
+          comment_id="$(printf '%s' "$comments" | jq -r --arg marker "$marker" '.[] | select(.body | contains($marker)) | .id' | head -n1)"
+
+          if [ -n "$comment_id" ] && [ "$comment_id" != "null" ]; then
+            body="${marker}
+            ### Landing preview
+
+            Preview removed because this PR is closed."
+            payload="$(jq -n --arg body "$body" '{body: $body}')"
+            curl -fsSL -X PATCH \
+              -H "Authorization: Bearer ${GH_TOKEN}" \
+              -H "Accept: application/vnd.github+json" \
+              -H "X-GitHub-Api-Version: 2022-11-28" \
+              "https://api.github.com/repos/${REPOSITORY}/issues/comments/${comment_id}" \
+              -d "$payload" >/dev/null
+          fi
