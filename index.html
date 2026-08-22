@@ -1,277 +1,158 @@
 <!doctype html>
-<html lang="en" data-theme="dark">
+<html lang="en" data-theme="light">
 <head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <meta name="description" content="Vlad Myahlov — scientific software engineer focused on laboratory systems, instrument workflows, technical documentation and research software prototypes." />
-  <meta name="author" content="Vlad Myahlov" />
-  <meta name="theme-color" content="#08111f" />
-  <meta property="og:title" content="Vlad Myahlov — Scientific Instrument Software Engineer" />
-  <meta property="og:description" content="Professional biography and engineering cases in scientific software, UV-Vis instrument workflows, laboratory systems and research prototypes." />
-  <meta property="og:type" content="website" />
-  <meta property="og:url" content="https://myahlovvlad.github.io/" />
-  <meta name="twitter:card" content="summary_large_image" />
-  <title>Vlad Myahlov — Scientific Instrument Software Engineer</title>
-  <link rel="icon" href="assets/favicon.svg" type="image/svg+xml" />
-  <link rel="manifest" href="site.webmanifest" />
-  <link rel="stylesheet" href="styles.css" />
-  <script defer src="script.js"></script>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta name="description" content="Vlad Myahlov — Scientific Software & Instrumentation Engineer. Measurement science, scientific instruments, embedded HMI, HAL, verification and engineering automation.">
+  <meta name="author" content="Vlad Myahlov">
+  <meta name="theme-color" content="#f4f3ee">
+  <link rel="canonical" href="https://myahlovvlad.github.io/">
+  <meta property="og:title" content="Vlad Myahlov — Scientific Software & Instrumentation Engineer">
+  <meta property="og:description" content="From measurement science to verifiable instrument software: instrument behaviour, HMI, HAL, scientific software and verification evidence.">
+  <meta property="og:type" content="profile">
+  <meta property="og:url" content="https://myahlovvlad.github.io/">
+  <meta property="og:image" content="https://myahlovvlad.github.io/assets/social-preview.svg">
+  <meta name="twitter:card" content="summary_large_image">
+  <title>Vlad Myahlov — Scientific Software & Instrumentation Engineer</title>
+  <link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
+  <link rel="manifest" href="site.webmanifest">
+  <link rel="stylesheet" href="portfolio.css">
+  <script defer src="portfolio.js"></script>
+  <script type="application/ld+json">
+  {
+    "@context":"https://schema.org",
+    "@type":"Person",
+    "name":"Vlad Myahlov",
+    "alternateName":"Влад Мяхлов",
+    "url":"https://myahlovvlad.github.io/",
+    "jobTitle":"Scientific Software & Instrumentation Engineer",
+    "sameAs":["https://github.com/myahlovvlad","https://www.researchgate.net/profile/Vlad_Mahlov"],
+    "knowsAbout":["Scientific software","Scientific instrumentation","UV-Vis spectrophotometry","Embedded HMI","Finite state machines","Hardware abstraction layers","Verification and validation","Laboratory automation","Metrology"]
+  }
+  </script>
 </head>
-<body>
-  <a class="skip-link" href="#main">Skip to content</a>
-
-  <header class="site-header" id="top">
-    <div class="header-inner">
-      <a class="brand" href="#top" aria-label="Vlad Myahlov home">
-        <span class="brand-mark" aria-hidden="true">VM</span>
-        <span class="brand-copy">
-          <strong>Vlad Myahlov</strong>
-          <small data-en="Scientific Instrument Software Engineer" data-ru="Инженер ПО для научных приборов">Scientific Instrument Software Engineer</small>
-        </span>
-      </a>
-
-      <nav class="primary-nav" aria-label="Primary navigation">
-        <a href="#about" data-en="Profile" data-ru="Профиль">Profile</a>
-        <a href="#evidence" data-en="Biography" data-ru="Биография">Biography</a>
-        <a href="#products" data-en="Cases" data-ru="Кейсы">Cases</a>
-        <a href="#education" data-en="STEM mentoring" data-ru="STEM-наставничество">STEM mentoring</a>
-      </nav>
-
-      <div class="header-actions">
-        <button class="icon-button" id="theme-toggle" type="button" aria-label="Toggle theme" title="Toggle theme">
-          <span aria-hidden="true">◐</span>
-        </button>
-        <div class="language-switch" role="group" aria-label="Language">
-          <button type="button" data-language="en" class="active">EN</button>
-          <button type="button" data-language="ru">RU</button>
-        </div>
+<body data-page="home">
+<a class="skip-link" href="#main">Skip to content</a>
+<header class="site-header">
+  <div class="shell header-inner">
+    <a class="brand" href="./" aria-label="Vlad Myahlov home">
+      <span class="brand-mark">VM</span><span class="brand-copy"><strong>Vlad Myahlov</strong><small data-en="Scientific Software & Instrumentation Engineer" data-ru="Инженер научного и приборного ПО">Scientific Software & Instrumentation Engineer</small></span>
+    </a>
+    <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="primary-navigation" aria-label="Open navigation"><span></span></button>
+    <nav class="primary-nav" id="primary-navigation" aria-label="Primary navigation">
+      <a href="cases/" data-en="Engineering" data-ru="Инженерные кейсы">Engineering</a>
+      <a href="projects/" data-en="Projects" data-ru="Проекты">Projects</a>
+      <a href="foundation/" data-en="Foundation" data-ru="Основа">Foundation</a>
+      <a href="writing/" data-en="Writing" data-ru="Публикации">Writing</a>
+      <a href="about/" data-en="About" data-ru="Обо мне">About</a>
+    </nav>
+    <div class="header-actions">
+      <button class="icon-button" type="button" data-theme-toggle aria-label="Switch color theme" aria-pressed="false">◐</button>
+      <div class="language-switch" role="group" aria-label="Language">
+        <button class="language-button" type="button" data-language="en" aria-pressed="true">EN</button>
+        <button class="language-button" type="button" data-language="ru" aria-pressed="false">RU</button>
       </div>
     </div>
-  </header>
-
-  <main id="main">
-    <section class="hero section-shell">
-      <div class="hero-copy reveal">
-        <p class="eyebrow" data-en="Scientific software · Instrument workflows · Documentation" data-ru="Научное ПО · Приборные workflows · Документация">Scientific software · Instrument workflows · Documentation</p>
-        <h1 data-en="Scientific software engineer for laboratory systems and instrument workflows." data-ru="Инженер научного ПО для лабораторных систем и приборных workflows.">Scientific software engineer for laboratory systems and instrument workflows.</h1>
-        <p class="hero-lead" data-en="I work with UV-Vis instruments, measurement workflows, technical documentation, test protocols and research software prototypes in computational chemistry and bioprocess modelling." data-ru="Работаю с UV-Vis приборами, измерительными workflow, технической документацией, протоколами испытаний и исследовательскими программными прототипами в вычислительной химии и моделировании биопроцессов.">I work with UV-Vis instruments, measurement workflows, technical documentation, test protocols and research software prototypes in computational chemistry and bioprocess modelling.</p>
-
-        <div class="hero-actions">
-          <a class="button button-primary" href="#products" data-en="Engineering cases" data-ru="Инженерные кейсы">Engineering cases</a>
-          <a class="button button-secondary" href="https://github.com/myahlovvlad" target="_blank" rel="noreferrer" data-en="GitHub profile" data-ru="Профиль GitHub">GitHub profile</a>
-          <a class="button button-secondary" href="https://www.researchgate.net/profile/Vlad_Mahlov?ev=hdr_xprf" target="_blank" rel="noreferrer">ResearchGate</a>
-        </div>
-
-        <ul class="signal-list" aria-label="Core fields">
-          <li>UV-Vis instrument workflows</li>
-          <li>Technical documentation</li>
-          <li>Research software prototypes</li>
-          <li>Computational modelling</li>
-        </ul>
+  </div>
+</header>
+<main id="main">
+  <section class="hero shell">
+    <div class="hero-copy" data-reveal>
+      <p class="eyebrow" data-en="SCIENTIFIC SOFTWARE · INSTRUMENTATION · VERIFICATION" data-ru="НАУЧНОЕ ПО · ПРИБОРОСТРОЕНИЕ · ВЕРИФИКАЦИЯ">SCIENTIFIC SOFTWARE · INSTRUMENTATION · VERIFICATION</p>
+      <h1><span data-en="From measurement science to" data-ru="От физики измерения — к">From measurement science to</span> <em data-en="verifiable instrument software." data-ru="проверяемому приборному ПО.">verifiable instrument software.</em></h1>
+      <p class="lead" data-en="I engineer software where measurement physics, real instrument behaviour and operator workflows cannot be separated: embedded HMI, hardware abstraction, measurement engines, desktop applications, test harnesses and verification evidence." data-ru="Я проектирую ПО там, где физику измерения, реальное поведение прибора и действия оператора нельзя разделить: embedded HMI, аппаратные абстракции, измерительные движки, desktop-приложения, тестовые harness и verification evidence.">I engineer software where measurement physics, real instrument behaviour and operator workflows cannot be separated: embedded HMI, hardware abstraction, measurement engines, desktop applications, test harnesses and verification evidence.</p>
+      <div class="hero-actions">
+        <a class="button button-primary" href="cases/" data-en="Explore engineering cases" data-ru="Смотреть инженерные кейсы">Explore engineering cases</a>
+        <a class="button button-secondary" href="https://github.com/myahlovvlad" target="_blank" rel="noreferrer">GitHub ↗</a>
       </div>
-
-      <div class="hero-visual reveal" aria-label="Instrument software workflow diagram">
-        <div class="orbit orbit-a"></div>
-        <div class="orbit orbit-b"></div>
-        <div class="system-core">
-          <span>Instrument</span>
-          <strong>Software</strong>
-          <span>Workflows</span>
-        </div>
-        <div class="node node-a">UV-Vis</div>
-        <div class="node node-b">FSM</div>
-        <div class="node node-c">Docs</div>
-        <div class="node node-d">Tests</div>
-      </div>
-    </section>
-
-    <section class="section section-shell" id="about">
-      <div class="section-heading reveal">
-        <p class="eyebrow" data-en="Professional profile" data-ru="Профессиональный профиль">Professional profile</p>
-        <h2 data-en="Scientific software, laboratory systems and validation-oriented documentation" data-ru="Научное ПО, лабораторные системы и документация, ориентированная на проверку">Scientific software, laboratory systems and validation-oriented documentation</h2>
-      </div>
-
-      <div class="about-grid">
-        <article class="about-main card reveal">
-          <p data-en="My background combines biotechnology education, analytical chemistry, STEM mentoring, technical writing for laboratory equipment and software development for scientific workflows. The current focus is software for UV-Vis instruments, laboratory data flows and reproducible research prototypes." data-ru="Мой опыт объединяет биотехнологическое образование, аналитическую химию, STEM-наставничество, техническое письмо для лабораторного оборудования и разработку ПО для научных workflow. Текущий фокус — ПО для UV-Vis приборов, лабораторные потоки данных и воспроизводимые исследовательские прототипы.">My background combines biotechnology education, analytical chemistry, STEM mentoring, technical writing for laboratory equipment and software development for scientific workflows. The current focus is software for UV-Vis instruments, laboratory data flows and reproducible research prototypes.</p>
-          <p data-en="In projects I describe the measurement process, data model, user interface states, acceptance criteria, test evidence and operating documentation. Public repositories are presented with their maturity level and known limitations." data-ru="В проектах я описываю измерительный процесс, модель данных, состояния интерфейса, критерии приёмки, тестовые свидетельства и эксплуатационную документацию. Публичные репозитории представлены с уровнем зрелости и известными ограничениями.">In projects I describe the measurement process, data model, user interface states, acceptance criteria, test evidence and operating documentation. Public repositories are presented with their maturity level and known limitations.</p>
-        </article>
-
-        <div class="capability-grid">
-          <article class="mini-card reveal">
-            <span class="mini-index">01</span>
-            <h3 data-en="Instrument workflows" data-ru="Приборные workflow">Instrument workflows</h3>
-            <p data-en="UV-Vis modes, measurement states, hardware communication concepts and GUI logic for laboratory instruments." data-ru="UV-Vis режимы, состояния измерений, концепции связи с оборудованием и логика GUI лабораторных приборов.">UV-Vis modes, measurement states, hardware communication concepts and GUI logic for laboratory instruments.</p>
-          </article>
-          <article class="mini-card reveal">
-            <span class="mini-index">02</span>
-            <h3 data-en="Documentation" data-ru="Документация">Documentation</h3>
-            <p data-en="Operating manuals, test programs, protocols, acceptance criteria and traceable engineering notes." data-ru="Руководства по эксплуатации, программы испытаний, протоколы, критерии приёмки и прослеживаемые инженерные заметки.">Operating manuals, test programs, protocols, acceptance criteria and traceable engineering notes.</p>
-          </article>
-          <article class="mini-card reveal">
-            <span class="mini-index">03</span>
-            <h3 data-en="Scientific software" data-ru="Научное ПО">Scientific software</h3>
-            <p data-en="Python, TypeScript, React, FastAPI, Electron, data models and finite-state machines." data-ru="Python, TypeScript, React, FastAPI, Electron, модели данных и конечные автоматы.">Python, TypeScript, React, FastAPI, Electron, data models and finite-state machines.</p>
-          </article>
-          <article class="mini-card reveal">
-            <span class="mini-index">04</span>
-            <h3 data-en="Modelling" data-ru="Моделирование">Modelling</h3>
-            <p data-en="Computational chemistry, bioprocess knowledge bases, simple process simulation and documented model limitations." data-ru="Вычислительная химия, базы знаний по биопроцессам, базовая процессная симуляция и документированные ограничения моделей.">Computational chemistry, bioprocess knowledge bases, simple process simulation and documented model limitations.</p>
-          </article>
-        </div>
-      </div>
-    </section>
-
-    <section class="section section-shell" id="evidence">
-      <div class="section-heading reveal">
-        <p class="eyebrow" data-en="Chronological biography" data-ru="Хронологическая биография">Chronological biography</p>
-        <h2 data-en="Education, laboratory practice, documentation and scientific software" data-ru="Образование, лабораторная практика, документация и научное ПО">Education, laboratory practice, documentation and scientific software</h2>
-      </div>
-
-      <div class="timeline">
-        <article class="timeline-item reveal">
-          <span class="timeline-year">2017-2021</span>
-          <div>
-            <h3 data-en="Biotechnology education" data-ru="Биотехнологическое образование">Biotechnology education</h3>
-            <p data-en="Bachelor's degree track in biotechnology at Saint Petersburg State Chemical Pharmaceutical University. The academic base included analytical chemistry, biotechnology and laboratory methods." data-ru="Бакалавриат по направлению инженер-биотехнолог в Санкт-Петербургском химико-фармацевтическом университете. Академическая база включала аналитическую химию, биотехнологию и лабораторные методы.">Bachelor's degree track in biotechnology at Saint Petersburg State Chemical Pharmaceutical University. The academic base included analytical chemistry, biotechnology and laboratory methods.</p>
-          </div>
-        </article>
-        <article class="timeline-item reveal">
-          <span class="timeline-year">2019-2024</span>
-          <div>
-            <h3 data-en="STEM mentoring and educational projects" data-ru="STEM-наставничество и образовательные проекты">STEM mentoring and educational projects</h3>
-            <p data-en="Mentored school students in analytical chemistry, biotechnology and interdisciplinary project work, including preparation for laboratory chemical analysis competitions and technology olympiads." data-ru="Занимался наставничеством школьников в аналитической химии, биотехнологии и междисциплинарной проектной работе, включая подготовку к соревнованиям по лабораторному химическому анализу и технологическим олимпиадам.">Mentored school students in analytical chemistry, biotechnology and interdisciplinary project work, including preparation for laboratory chemical analysis competitions and technology olympiads.</p>
-          </div>
-        </article>
-        <article class="timeline-item reveal">
-          <span class="timeline-year">2024</span>
-          <div>
-            <h3 data-en="Analytical chemistry practice" data-ru="Практика аналитической химии">Analytical chemistry practice</h3>
-            <p data-en="Worked as an analytical chemist at Medpolymer. This stage connected laboratory methods, measurement discipline and documentation with later work on scientific instrumentation." data-ru="Работал химиком-аналитиком в Медполимер. Этот этап связал лабораторные методики, дисциплину измерений и документацию с дальнейшей работой над научными приборами.">Worked as an analytical chemist at Medpolymer. This stage connected laboratory methods, measurement discipline and documentation with later work on scientific instrumentation.</p>
-          </div>
-        </article>
-        <article class="timeline-item reveal">
-          <span class="timeline-year">2024-2025</span>
-          <div>
-            <h3 data-en="Spectrophotometer documentation and compliance work" data-ru="Документация и compliance для спектрофотометров">Spectrophotometer documentation and compliance work</h3>
-            <p data-en="Worked at ECROSCHEM as a methodologist, technical writer and pharmaceutical-compliance specialist for spectrophotometers. Analysed instrument functionality, localized embedded GUI elements, prepared interface improvements and produced two operating manuals of approximately 75 pages each." data-ru="Работал в ЭКРОСХИМ методистом, техническим писателем и специалистом по фарм-комплаенсу спектрофотометров. Анализировал функциональность приборов, локализовал элементы embedded GUI, готовил улучшения интерфейса и разработал два руководства по эксплуатации объёмом около 75 страниц каждое.">Worked at ECROSCHEM as a methodologist, technical writer and pharmaceutical-compliance specialist for spectrophotometers. Analysed instrument functionality, localized embedded GUI elements, prepared interface improvements and produced two operating manuals of approximately 75 pages each.</p>
-          </div>
-        </article>
-        <article class="timeline-item reveal">
-          <span class="timeline-year">2025-2026</span>
-          <div>
-            <h3 data-en="Instrument software and measurement workflows" data-ru="Приборное ПО и измерительные workflow">Instrument software and measurement workflows</h3>
-            <p data-en="Tested PC communication, peripherals and metrological characteristics; prepared test programs and protocols; worked on LIMS export concepts and GUI-based control workflows for UV-Vis spectrophotometry." data-ru="Тестировал связь с ПК, периферию и метрологические характеристики; готовил программы и протоколы испытаний; работал над концепциями экспорта в LIMS и GUI-workflow управления UV-Vis спектрофотометрами.">Tested PC communication, peripherals and metrological characteristics; prepared test programs and protocols; worked on LIMS export concepts and GUI-based control workflows for UV-Vis spectrophotometry.</p>
-          </div>
-        </article>
-        <article class="timeline-item reveal">
-          <span class="timeline-year">2026</span>
-          <div>
-            <h3 data-en="Cross-platform scientific software prototypes" data-ru="Кроссплатформенные прототипы научного ПО">Cross-platform scientific software prototypes</h3>
-            <p data-en="Developed research and engineering prototypes: a digital-bioreactor modelling repository, LCD-bitmap IDE for instrument firmware interfaces, Q2SC computational chemistry alpha prototype and private UV-Vis instrument-control software cases." data-ru="Разрабатывал исследовательские и инженерные прототипы: репозиторий моделирования цифрового двойника биореактора, LCD-bitmap IDE для интерфейсов приборной прошивки, Q2SC alpha-прототип по вычислительной химии и закрытые кейсы ПО управления UV-Vis приборами.">Developed research and engineering prototypes: a digital-bioreactor modelling repository, LCD-bitmap IDE for instrument firmware interfaces, Q2SC computational chemistry alpha prototype and private UV-Vis instrument-control software cases.</p>
-          </div>
-        </article>
-      </div>
-    </section>
-
-    <section class="section section-shell" id="products">
-      <div class="section-heading reveal">
-        <p class="eyebrow" data-en="Engineering cases" data-ru="Инженерные кейсы">Engineering cases</p>
-        <h2 data-en="Research prototypes and instrument-software work" data-ru="Исследовательские прототипы и работа с приборным ПО">Research prototypes and instrument-software work</h2>
-        <p data-en="This section separates public research prototypes from private instrument-software cases. Public repositories include documentation, architecture notes and stated limitations." data-ru="В этом разделе публичные исследовательские прототипы отделены от закрытых кейсов по приборному ПО. Публичные репозитории содержат документацию, архитектурные заметки и указанные ограничения.">This section separates public research prototypes from private instrument-software cases. Public repositories include documentation, architecture notes and stated limitations.</p>
-      </div>
-
-      <div class="product-grid">
-        <article class="product-card reveal">
-          <div class="product-topline">
-            <span class="product-number">01</span>
-            <span class="status status-public" data-en="Public research alpha" data-ru="Публичная research alpha">Public research alpha</span>
-          </div>
-          <h3>Q2SC Platform</h3>
-          <p data-en="Research alpha prototype for computational chemistry and predictive spectroscopy. It combines molecule preparation, PySCF-based quantum calculations, QSAR/QSPR, chemometrics, traceability notes and a React/Electron interface. Models and spectral profiles require separate scientific validation." data-ru="Исследовательский alpha-прототип для вычислительной химии и предиктивной спектроскопии. Объединяет подготовку молекул, квантовые расчёты на PySCF, QSAR/QSPR, хемометрию, заметки по прослеживаемости и интерфейс React/Electron. Модели и спектральные профили требуют отдельной научной валидации.">Research alpha prototype for computational chemistry and predictive spectroscopy. It combines molecule preparation, PySCF-based quantum calculations, QSAR/QSPR, chemometrics, traceability notes and a React/Electron interface. Models and spectral profiles require separate scientific validation.</p>
-          <ul class="tag-list"><li>PySCF</li><li>FastAPI</li><li>React</li><li>QSAR</li><li>Chemometrics</li></ul>
-          <div class="card-actions">
-            <a href="https://github.com/myahlovvlad/q2sc-platform" target="_blank" rel="noreferrer" data-en="Open repository" data-ru="Открыть репозиторий">Open repository</a>
-            <a href="https://github.com/myahlovvlad/q2sc-platform/blob/master/README.en.md" target="_blank" rel="noreferrer">README EN</a>
-            <a href="https://github.com/myahlovvlad/q2sc-platform/blob/master/README.md" target="_blank" rel="noreferrer">README RU</a>
-          </div>
-        </article>
-
-        <article class="product-card reveal">
-          <div class="product-topline">
-            <span class="product-number">02</span>
-            <span class="status status-public" data-en="Public prototype" data-ru="Публичный прототип">Public prototype</span>
-          </div>
-          <h3>BioCult-KB</h3>
-          <p data-en="Digital-bioreactor research prototype for modelling Aspergillus sydowii cultivation. The repository includes a structured knowledge base, FastAPI web app, process simulation, GEM-lite COBRA/SBML model, OMICS resources and operating documentation." data-ru="Исследовательский прототип цифрового двойника биореактора для моделирования культивирования Aspergillus sydowii. Репозиторий включает структурированную базу знаний, FastAPI web app, процессную симуляцию, GEM-lite COBRA/SBML модель, OMICS-ресурсы и эксплуатационную документацию.">Digital-bioreactor research prototype for modelling Aspergillus sydowii cultivation. The repository includes a structured knowledge base, FastAPI web app, process simulation, GEM-lite COBRA/SBML model, OMICS resources and operating documentation.</p>
-          <ul class="tag-list"><li>Bioprocess</li><li>FastAPI</li><li>COBRA/SBML</li><li>OMICS</li><li>Knowledge base</li></ul>
-          <div class="card-actions">
-            <a href="https://github.com/myahlovvlad/Cultivation-collagenase" target="_blank" rel="noreferrer" data-en="Open repository" data-ru="Открыть репозиторий">Open repository</a>
-            <a href="https://github.com/myahlovvlad/Cultivation-collagenase/blob/main/README.en.md" target="_blank" rel="noreferrer">README EN</a>
-            <a href="https://github.com/myahlovvlad/Cultivation-collagenase/blob/main/README.md" target="_blank" rel="noreferrer">README RU</a>
-          </div>
-        </article>
-      </div>
-
-      <div class="pipeline-strip reveal">
-        <div>
-          <span class="status status-development" data-en="In development" data-ru="В разработке">In development</span>
-          <h3>LCD-bitmap IDE Web</h3>
-          <p data-en="Cross-platform engineering IDE for LCD interfaces, finite-state machines and physical control panels for instrument firmware. Includes a 128x64 LCD editor, FSM graph editor, runtime simulator and firmware export." data-ru="Кроссплатформенная инженерная IDE для LCD-интерфейсов, конечных автоматов и физических панелей управления приборной прошивкой. Включает редактор LCD 128x64, FSM graph editor, runtime simulator и экспорт в прошивку.">Cross-platform engineering IDE for LCD interfaces, finite-state machines and physical control panels for instrument firmware. Includes a 128x64 LCD editor, FSM graph editor, runtime simulator and firmware export.</p>
-        </div>
-        <div>
-          <span class="status status-development" data-en="Private industrial case" data-ru="Закрытый промышленный кейс">Private industrial case</span>
-          <h3>SpectroNex</h3>
-          <p data-en="Prototype software architecture for UV-Vis spectrophotometer control: backend/frontend integration, HAL specification, measurement-core logic and the canonical Spectrum Scan workflow Baseline → Rezero → Sample." data-ru="Прототип архитектуры ПО управления UV-Vis спектрофотометром: интеграция backend/frontend, HAL-спецификация, логика measurement core и канонический workflow сканирования спектра Baseline → Rezero → Sample.">Prototype software architecture for UV-Vis spectrophotometer control: backend/frontend integration, HAL specification, measurement-core logic and the canonical Spectrum Scan workflow Baseline → Rezero → Sample.</p>
-        </div>
-      </div>
-    </section>
-
-    <section class="section section-shell" id="education">
-      <div class="education-layout">
-        <div class="section-heading reveal">
-          <p class="eyebrow" data-en="Early branch" data-ru="Раннее ответвление">Early branch</p>
-          <h2 data-en="STEM mentoring before the current instrument-software focus" data-ru="STEM-наставничество до текущего фокуса на приборном ПО">STEM mentoring before the current instrument-software focus</h2>
-          <p data-en="From 2019 to 2024 I mentored school students in analytical chemistry, biotechnology, laboratory chemical analysis and interdisciplinary engineering projects. This experience shaped my documentation style: explain the method, define the task, show evidence and state limitations." data-ru="С 2019 по 2024 год я занимался наставничеством школьников в аналитической химии, биотехнологии, лабораторном химическом анализе и междисциплинарных инженерных проектах. Этот опыт сформировал мой подход к документации: объяснить метод, определить задачу, показать свидетельства и указать ограничения.">From 2019 to 2024 I mentored school students in analytical chemistry, biotechnology, laboratory chemical analysis and interdisciplinary engineering projects. This experience shaped my documentation style: explain the method, define the task, show evidence and state limitations.</p>
-          <a class="text-link" href="https://www.researchgate.net/profile/Vlad_Mahlov?ev=hdr_xprf" target="_blank" rel="noreferrer" data-en="Open ResearchGate profile →" data-ru="Открыть профиль ResearchGate →">Open ResearchGate profile →</a>
-        </div>
-
-        <article class="notebook-card reveal">
-          <div class="notebook-toolbar">
-            <span></span><span></span><span></span>
-            <code>mentoring_and_publications</code>
-          </div>
-          <div class="notebook-content">
-            <span class="lesson-label" data-en="Selected outcomes" data-ru="Выбранные результаты">Selected outcomes</span>
-            <h3 data-en="Educational and methodological work" data-ru="Образовательная и методическая работа">Educational and methodological work</h3>
-            <p data-en="Prepared students for WorldSkills Russia Juniors in Laboratory Chemical Analysis and technology olympiad tracks. Public ResearchGate materials include a laboratory practicum for training competitors and a COMSOL Multiphysics cyclic-voltammetry modelling presentation." data-ru="Готовил школьников к WorldSkills Russia Juniors по лабораторному химическому анализу и технологическим олимпиадам. В публичном профиле ResearchGate размещены лабораторный практикум для подготовки участников и презентация по моделированию циклической вольтамперометрии в COMSOL Multiphysics.">Prepared students for WorldSkills Russia Juniors in Laboratory Chemical Analysis and technology olympiad tracks. Public ResearchGate materials include a laboratory practicum for training competitors and a COMSOL Multiphysics cyclic-voltammetry modelling presentation.</p>
-            <div class="code-preview" aria-hidden="true">
-              <code>2019-2024: STEM mentoring</code>
-              <code>2024: laboratory practicum, COMSOL case</code>
-            </div>
-            <a class="button button-secondary" href="https://github.com/myahlovvlad/q2sc-platform/tree/master/education" target="_blank" rel="noreferrer" data-en="Open Q2SC education notebooks" data-ru="Открыть образовательные блокноты Q2SC">Open Q2SC education notebooks</a>
-          </div>
-        </article>
-      </div>
-    </section>
-
-    <section class="contact-band">
-      <div class="section-shell contact-inner reveal">
-        <div>
-          <p class="eyebrow" data-en="Collaboration" data-ru="Сотрудничество">Collaboration</p>
-          <h2 data-en="Available for scientific software, laboratory systems and instrument-workflow engineering." data-ru="Открыт к задачам по научному ПО, лабораторным системам и инженерии приборных workflow.">Available for scientific software, laboratory systems and instrument-workflow engineering.</h2>
-        </div>
-        <a class="button button-primary" href="https://github.com/myahlovvlad" target="_blank" rel="noreferrer" data-en="Contact via GitHub" data-ru="Связаться через GitHub">Contact via GitHub</a>
-      </div>
-    </section>
-  </main>
-
-  <footer class="site-footer">
-    <div class="section-shell footer-inner">
-      <p>© <span id="year">2026</span> Vlad Myahlov</p>
-      <p data-en="Professional biography and selected engineering cases." data-ru="Профессиональная биография и выбранные инженерные кейсы.">Professional biography and selected engineering cases.</p>
-      <a href="#top" data-en="Back to top ↑" data-ru="Наверх ↑">Back to top ↑</a>
     </div>
-  </footer>
+    <div class="system-visual" data-depth aria-label="Engineering system from measurement to verification" data-reveal>
+      <div class="system-stack">
+        <div class="system-layer"><span class="layer-index">01</span><span class="layer-copy"><strong data-en="MEASUREMENT" data-ru="ИЗМЕРЕНИЕ">MEASUREMENT</strong><small data-en="physics · spectrum · signal" data-ru="физика · спектр · сигнал">physics · spectrum · signal</small></span></div>
+        <div class="system-layer"><span class="layer-index">02</span><span class="layer-copy"><strong data-en="INSTRUMENT" data-ru="ПРИБОР">INSTRUMENT</strong><small data-en="optics · hardware · protocol" data-ru="оптика · hardware · protocol">optics · hardware · protocol</small></span></div>
+        <div class="system-layer"><span class="layer-index">03</span><span class="layer-copy"><strong>FIRMWARE / HMI</strong><small data-en="states · events · controls" data-ru="состояния · события · управление">states · events · controls</small></span></div>
+        <div class="system-layer"><span class="layer-index">04</span><span class="layer-copy"><strong data-en="SOFTWARE" data-ru="ПО">SOFTWARE</strong><small>HAL · core · workflows</small></span></div>
+        <div class="system-layer"><span class="layer-index">05</span><span class="layer-copy"><strong data-en="VERIFICATION" data-ru="ВЕРИФИКАЦИЯ">VERIFICATION</strong><small data-en="tests · evidence · traceability" data-ru="испытания · evidence · traceability">tests · evidence · traceability</small></span></div>
+      </div>
+    </div>
+  </section>
+
+  <section class="signal-strip" aria-label="Professional domains">
+    <div class="shell signal-grid">
+      <div class="signal"><b>UV-VIS</b><span data-en="Measurement systems" data-ru="Измерительные системы">Measurement systems</span><small data-en="single + double beam" data-ru="одно- и двухлучевые">single + double beam</small></div>
+      <div class="signal"><b>HMI / FSM</b><span data-en="Instrument behaviour" data-ru="Поведение прибора">Instrument behaviour</span><small>screens → states</small></div>
+      <div class="signal"><b>HAL</b><span data-en="Control architecture" data-ru="Архитектура управления">Control architecture</span><small>protocol → core</small></div>
+      <div class="signal"><b>FAT / OQ</b><span data-en="Verification evidence" data-ru="Доказательства проверки">Verification evidence</span><small>run → CAPA → retest</small></div>
+      <div class="signal"><b>AI / MCP</b><span data-en="Engineering automation" data-ru="Инженерная автоматизация">Engineering automation</span><small>spec → agent → evidence</small></div>
+    </div>
+  </section>
+
+  <section class="section shell">
+    <div class="section-heading" data-reveal>
+      <div><p class="eyebrow" data-en="POSITIONING" data-ru="ПОЗИЦИОНИРОВАНИЕ">POSITIONING</p><h2 data-en="One engineering path across the full instrument stack." data-ru="Одна инженерная траектория через весь стек прибора.">One engineering path across the full instrument stack.</h2></div>
+      <p data-en="My strongest work appears at the interfaces between disciplines: when software must reflect physical measurement constraints, embedded interface behaviour, protocol state and acceptance evidence at the same time." data-ru="Мои наиболее сильные задачи находятся на границах дисциплин: когда ПО одновременно должно учитывать ограничения физического измерения, поведение embedded-интерфейса, состояние протокола и критерии приёмки.">My strongest work appears at the interfaces between disciplines: when software must reflect physical measurement constraints, embedded interface behaviour, protocol state and acceptance evidence at the same time.</p>
+    </div>
+    <div class="grid grid-3">
+      <article class="card" data-reveal><span class="number">A / DOMAIN</span><h3 data-en="Measurement first" data-ru="Сначала измерение">Measurement first</h3><p data-en="Start with the analytical method, signal path, optics, calibration, operator sequence and failure modes — then design the software." data-ru="Сначала аналитическая методика, сигнал, оптика, калибровка, действия оператора и отказовые состояния — затем ПО.">Start with the analytical method, signal path, optics, calibration, operator sequence and failure modes — then design the software.</p></article>
+      <article class="card" data-reveal><span class="number">B / SYSTEM</span><h3 data-en="Explicit behaviour" data-ru="Явное поведение">Explicit behaviour</h3><p data-en="Represent device state, HMI transitions, blocking operations and measurement workflows explicitly instead of hiding them behind screens." data-ru="Явно представлять состояние прибора, переходы HMI, блокирующие операции и измерительные workflow, а не прятать их за экранами.">Represent device state, HMI transitions, blocking operations and measurement workflows explicitly instead of hiding them behind screens.</p></article>
+      <article class="card" data-reveal><span class="number">C / EVIDENCE</span><h3 data-en="Verification built in" data-ru="Верификация встроена">Verification built in</h3><p data-en="Connect requirements to physical runs, logs, plots, deviations, root causes, CAPA and retest evidence." data-ru="Связывать требования с физическими прогонами, логами, графиками, отклонениями, root cause, CAPA и повторными испытаниями.">Connect requirements to physical runs, logs, plots, deviations, root causes, CAPA and retest evidence.</p></article>
+    </div>
+  </section>
+
+  <section class="section section-dark">
+    <div class="shell">
+      <div class="section-heading" data-reveal>
+        <div><p class="eyebrow" data-en="FEATURED ENGINEERING CASES" data-ru="КЛЮЧЕВЫЕ ИНЖЕНЕРНЫЕ КЕЙСЫ">FEATURED ENGINEERING CASES</p><h2 data-en="Industrial work is the core. Public projects are the proof." data-ru="Промышленные задачи — ядро. Публичные проекты — доказательство.">Industrial work is the core. Public projects are the proof.</h2></div>
+        <p data-en="Employer-associated work is described only at architecture, workflow and outcome level. Proprietary code, binaries and confidential device details are intentionally excluded." data-ru="Работа, связанная с работодателем, описана только на уровне архитектуры, workflow и результата. Proprietary code, бинарные файлы и конфиденциальные детали приборов намеренно исключены.">Employer-associated work is described only at architecture, workflow and outcome level. Proprietary code, binaries and confidential device details are intentionally excluded.</p>
+      </div>
+      <div class="case-list">
+        <a class="case-card" href="cases/instrument-productization.html" data-reveal><span class="case-index">01 / INDUSTRIAL</span><span><h3 data-en="Scientific instrument productization" data-ru="Продуктизация научного прибора">Scientific instrument productization</h3><p data-en="From OEM UV-Vis equipment to a controlled analytical product: functional analysis, HMI requirements, testing, metrology, documentation and accessories." data-ru="От OEM UV-Vis оборудования к управляемому аналитическому продукту: функциональный анализ, требования к HMI, испытания, метрология, документация и аксессуары.">From OEM UV-Vis equipment to a controlled analytical product: functional analysis, HMI requirements, testing, metrology, documentation and accessories.</p></span><span class="flow"><span>OEM</span><i>→</i><span>TEST</span><i>→</i><span>METROLOGY</span><i>→</i><span>PRODUCT</span></span></a>
+        <a class="case-card" href="cases/embedded-hmi.html" data-reveal><span class="case-index">02 / INDUSTRIAL + PUBLIC TOOL</span><span><h3 data-en="Embedded HMI as executable behaviour" data-ru="Embedded HMI как исполняемое поведение">Embedded HMI as executable behaviour</h3><p data-en="Formalizing screens, controls, events and states into an FSM-oriented workflow that can be simulated before firmware integration." data-ru="Формализация экранов, элементов управления, событий и состояний в FSM-ориентированный workflow, который можно симулировать до интеграции firmware.">Formalizing screens, controls, events and states into an FSM-oriented workflow that can be simulated before firmware integration.</p></span><span class="flow"><span>SCREEN</span><i>→</i><span>EVENT</span><i>→</i><span>STATE</span><i>→</i><span>FSM</span></span></a>
+        <a class="case-card" href="cases/instrument-control-software.html" data-reveal><span class="case-index">03 / INDUSTRIAL PROTOTYPE</span><span><h3 data-en="Scientific instrument control software" data-ru="ПО управления научным прибором">Scientific instrument control software</h3><p data-en="Reconstructing real spectrophotometer behaviour into protocol, HAL, instrument state, measurement core, workflow engine and frontend layers." data-ru="Реконструкция поведения реального спектрофотометра в слои protocol, HAL, instrument state, measurement core, workflow engine и frontend.">Reconstructing real spectrophotometer behaviour into protocol, HAL, instrument state, measurement core, workflow engine and frontend layers.</p></span><span class="flow"><span>PROTOCOL</span><i>→</i><span>HAL</span><i>→</i><span>CORE</span><i>→</i><span>UI</span></span></a>
+        <a class="case-card" href="cases/verification-engineering.html" data-reveal><span class="case-index">04 / INDUSTRIAL</span><span><h3 data-en="Verification-first engineering" data-ru="Verification-first engineering">Verification-first engineering</h3><p data-en="Turning instrument behaviour into reproducible evidence through hardware runs, logs, metrology, deviations, root-cause analysis, CAPA and retesting." data-ru="Превращение поведения прибора в воспроизводимые доказательства через hardware-прогоны, логи, метрологию, отклонения, root-cause analysis, CAPA и retest.">Turning instrument behaviour into reproducible evidence through hardware runs, logs, metrology, deviations, root-cause analysis, CAPA and retesting.</p></span><span class="flow"><span>REQ</span><i>→</i><span>RUN</span><i>→</i><span>EVIDENCE</span><i>→</i><span>RETEST</span></span></a>
+      </div>
+    </div>
+  </section>
+
+  <section class="section shell">
+    <div class="section-heading" data-reveal><div><p class="eyebrow" data-en="PUBLIC ENGINEERING" data-ru="ПУБЛИЧНАЯ ИНЖЕНЕРИЯ">PUBLIC ENGINEERING</p><h2 data-en="Inspectable projects, not a technology list." data-ru="Проекты, которые можно проверить, а не список технологий.">Inspectable projects, not a technology list.</h2></div><p data-en="Public repositories demonstrate how industrial problems are generalized into reusable engineering tools and research systems." data-ru="Публичные репозитории показывают, как промышленные проблемы превращаются в универсальные инженерные инструменты и исследовательские системы.">Public repositories demonstrate how industrial problems are generalized into reusable engineering tools and research systems.</p></div>
+    <div class="project-grid">
+      <a class="project-card featured" href="projects/lcd-bitmap-ide.html" data-reveal><span class="project-meta"><span>FLAGSHIP / OPEN SOURCE</span><span>2026 ↗</span></span><span class="project-bottom"><h3>LCD Bitmap IDE</h3><p data-en="Offline embedded HMI/FSM workbench: LCD authoring, physical controls, runtime simulation, DSL, firmware exports and local REST/MCP automation." data-ru="Offline-среда embedded HMI/FSM: LCD authoring, физические кнопки, runtime-симуляция, DSL, firmware exports и локальная REST/MCP-автоматизация.">Offline embedded HMI/FSM workbench: LCD authoring, physical controls, runtime simulation, DSL, firmware exports and local REST/MCP automation.</p></span></a>
+      <a class="project-card" href="projects/#q2sc" data-reveal><span class="project-meta"><span>RESEARCH / ALPHA</span><span>↗</span></span><span class="project-bottom"><h3>Q2SC</h3><p data-en="Computational chemistry and predictive spectroscopy workflows." data-ru="Вычислительная химия и predictive spectroscopy workflows.">Computational chemistry and predictive spectroscopy workflows.</p></span></a>
+      <a class="project-card" href="projects/#biocult" data-reveal><span class="project-meta"><span>RESEARCH / EXPERIMENTAL</span><span>↗</span></span><span class="project-bottom"><h3>BioCult-KB</h3><p data-en="Bioprocess modelling and scientific knowledge-system prototype." data-ru="Прототип моделирования биопроцессов и scientific knowledge system.">Bioprocess modelling and scientific knowledge-system prototype.</p></span></a>
+    </div>
+  </section>
+
+  <section class="section-tight shell">
+    <div class="section-heading" data-reveal><div><p class="eyebrow" data-en="SELECTED EVIDENCE" data-ru="ДОКАЗАТЕЛЬСТВА">SELECTED EVIDENCE</p><h2 data-en="Evidence at every layer of the stack." data-ru="Доказательства на каждом уровне стека.">Evidence at every layer of the stack.</h2></div></div>
+    <div class="proof-grid">
+      <div class="proof" data-reveal><b>01 / HARDWARE</b><strong data-en="Real instruments" data-ru="Реальные приборы">Real instruments</strong><p data-en="Engineering decisions tested against physical UV-Vis hardware." data-ru="Инженерные решения проверяются на реальном UV-Vis hardware.">Engineering decisions tested against physical UV-Vis hardware.</p></div>
+      <div class="proof" data-reveal><b>02 / OEM</b><strong data-en="Implemented behaviour" data-ru="Реализованное поведение">Implemented behaviour</strong><p data-en="Formalized HMI behaviour transferred into target instrument firmware." data-ru="Формализованное HMI-поведение перенесено в firmware целевого прибора.">Formalized HMI behaviour transferred into target instrument firmware.</p></div>
+      <div class="proof" data-reveal><b>03 / VERIFICATION</b><strong data-en="Traceable runs" data-ru="Прослеживаемые прогоны">Traceable runs</strong><p data-en="Requirements connected to logs, measurements, deviations and retests." data-ru="Требования связаны с логами, измерениями, отклонениями и retest.">Requirements connected to logs, measurements, deviations and retests.</p></div>
+      <div class="proof" data-reveal><b>04 / OPEN SOURCE</b><strong data-en="Inspectable tooling" data-ru="Проверяемый tooling">Inspectable tooling</strong><p data-en="Public engineering repositories expose architecture and implementation quality." data-ru="Публичные engineering-репозитории показывают архитектуру и качество реализации.">Public engineering repositories expose architecture and implementation quality.</p></div>
+    </div>
+  </section>
+
+  <section class="section shell">
+    <div class="section-heading" data-reveal><div><p class="eyebrow" data-en="PROFESSIONAL TRAJECTORY" data-ru="ПРОФЕССИОНАЛЬНАЯ ТРАЕКТОРИЯ">PROFESSIONAL TRAJECTORY</p><h2 data-en="The roles changed. The system thinking accumulated." data-ru="Роли менялись. Системное мышление накапливалось.">The roles changed. The system thinking accumulated.</h2></div><p data-en="Science, teaching and laboratory practice are not a competing identity; they are the foundation for measurement-first engineering and technical communication." data-ru="Наука, преподавание и лабораторная практика — не конкурирующая идентичность, а основа measurement-first engineering и технической коммуникации.">Science, teaching and laboratory practice are not a competing identity; they are the foundation for measurement-first engineering and technical communication.</p></div>
+    <div class="timeline" data-reveal>
+      <article><span class="meta">2017–2021</span><h3 data-en="Biotechnology" data-ru="Биотехнология">Biotechnology</h3><p data-en="Analytical chemistry and laboratory science." data-ru="Аналитическая химия и лабораторная наука.">Analytical chemistry and laboratory science.</p></article>
+      <article><span class="meta">2019–2024</span><h3 data-en="STEM mentoring" data-ru="STEM-наставничество">STEM mentoring</h3><p data-en="System decomposition and method design." data-ru="Декомпозиция систем и проектирование методик.">System decomposition and method design.</p></article>
+      <article><span class="meta">2024</span><h3 data-en="Analytical lab" data-ru="Аналитическая лаборатория">Analytical lab</h3><p data-en="Operator perspective and measurement discipline." data-ru="Перспектива оператора и дисциплина измерений.">Operator perspective and measurement discipline.</p></article>
+      <article><span class="meta">2024–2025</span><h3 data-en="Instrumentation" data-ru="Приборостроение">Instrumentation</h3><p data-en="From using instruments to engineering behaviour." data-ru="От использования приборов к проектированию поведения.">From using instruments to engineering behaviour.</p></article>
+      <article><span class="meta">2025–2026</span><h3 data-en="Product + verification" data-ru="Продукт + verification">Product + verification</h3><p data-en="Metrology, HMI, qualification and product work." data-ru="Метрология, HMI, квалификация и продуктовая работа.">Metrology, HMI, qualification and product work.</p></article>
+      <article><span class="meta">2026</span><h3 data-en="Systems engineering" data-ru="Systems engineering">Systems engineering</h3><p data-en="HAL, HIL thinking, MCP and agent-ready tooling." data-ru="HAL, HIL-подход, MCP и agent-ready tooling.">HAL, HIL thinking, MCP and agent-ready tooling.</p></article>
+    </div>
+  </section>
+
+  <section class="section-tight shell">
+    <div class="callout" data-reveal><p class="eyebrow" data-en="SCIENTIFIC & STEM FOUNDATION" data-ru="НАУЧНАЯ И STEM-ОСНОВА">SCIENTIFIC & STEM FOUNDATION</p><h2 data-en="Why this engineering profile did not start with software." data-ru="Почему этот инженерный профиль начался не с программирования.">Why this engineering profile did not start with software.</h2><p class="lead" data-en="Biotechnology, analytical chemistry, WorldSkills practice, STEM mentoring, CAD/3D prototyping and technical communication formed the domain knowledge and decomposition skills behind the current instrumentation work." data-ru="Биотехнология, аналитическая химия, WorldSkills, STEM-наставничество, CAD/3D-прототипирование и техническая коммуникация сформировали предметную базу и навыки декомпозиции, на которых строится текущая работа с приборами.">Biotechnology, analytical chemistry, WorldSkills practice, STEM mentoring, CAD/3D prototyping and technical communication formed the domain knowledge and decomposition skills behind the current instrumentation work.</p><div class="hero-actions"><a class="button button-primary" href="foundation/" data-en="Explore foundation" data-ru="Открыть Foundation">Explore foundation</a><a class="button button-secondary" href="about/" data-en="Read trajectory" data-ru="Читать траекторию">Read trajectory</a></div></div>
+  </section>
+
+  <section class="section shell">
+    <div class="cta" data-reveal><div><p class="eyebrow" data-en="RELEVANT PROBLEMS" data-ru="РЕЛЕВАНТНЫЕ ЗАДАЧИ">RELEVANT PROBLEMS</p><h2 data-en="Where domain knowledge, software architecture and real hardware must converge." data-ru="Где должны сойтись предметная область, архитектура ПО и реальный hardware.">Where domain knowledge, software architecture and real hardware must converge.</h2></div><div class="stack"><p data-en="Scientific instrument software · Laboratory automation · Embedded HMI · Verification infrastructure · Scientific desktop applications · AI-assisted engineering systems." data-ru="ПО научных приборов · Лабораторная автоматизация · Embedded HMI · Verification infrastructure · Scientific desktop applications · AI-assisted engineering systems.">Scientific instrument software · Laboratory automation · Embedded HMI · Verification infrastructure · Scientific desktop applications · AI-assisted engineering systems.</p><div class="hero-actions"><a class="button button-primary" href="https://github.com/myahlovvlad" target="_blank" rel="noreferrer">GitHub</a><a class="button button-secondary" href="https://www.researchgate.net/profile/Vlad_Mahlov" target="_blank" rel="noreferrer">ResearchGate</a></div></div></div>
+  </section>
+</main>
+<footer class="site-footer"><div class="shell"><div class="footer-grid"><div class="footer-brand"><strong>Vlad Myahlov</strong><span data-en="Scientific Software & Instrumentation Engineer" data-ru="Инженер научного и приборного ПО">Scientific Software & Instrumentation Engineer</span></div><nav class="footer-nav" aria-label="Footer navigation"><div class="footer-col"><b data-en="Engineering" data-ru="Кейсы">Engineering</b><a href="cases/instrument-productization.html">Productization</a><a href="cases/embedded-hmi.html">Embedded HMI</a><a href="cases/instrument-control-software.html">Instrument software</a><a href="cases/verification-engineering.html">Verification</a></div><div class="footer-col"><b data-en="Projects" data-ru="Проекты">Projects</b><a href="projects/lcd-bitmap-ide.html">LCD Bitmap IDE</a><a href="projects/#q2sc">Q2SC</a><a href="projects/#biocult">BioCult-KB</a></div><div class="footer-col"><b data-en="Profile" data-ru="Профиль">Profile</b><a href="foundation/">Foundation</a><a href="writing/">Writing</a><a href="about/">About</a></div><div class="footer-col"><b data-en="External" data-ru="Внешние">External</b><a href="https://github.com/myahlovvlad" target="_blank" rel="noreferrer">GitHub ↗</a><a href="https://www.researchgate.net/profile/Vlad_Mahlov" target="_blank" rel="noreferrer">ResearchGate ↗</a></div></nav></div><div class="footer-bottom"><span>© <span data-year>2026</span> Vlad Myahlov</span><a href="#main" data-en="Back to top ↑" data-ru="Наверх ↑">Back to top ↑</a></div></div></footer>
 </body>
 </html>
