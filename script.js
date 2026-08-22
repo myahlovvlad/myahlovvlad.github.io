@@ -1,5 +1,19 @@
 (() => {
   const root = document.documentElement;
+
+  const isHome = location.pathname === "/" || location.pathname.endsWith("/index.html") || location.pathname.includes("/pr-preview/");
+  if (isHome) {
+    const nav = document.querySelector(".primary-nav");
+    if (nav && !nav.querySelector('a[href="foundation.html"]')) {
+      const foundationLink = document.createElement("a");
+      foundationLink.href = "foundation.html";
+      foundationLink.dataset.en = "Foundation";
+      foundationLink.dataset.ru = "Основа";
+      foundationLink.textContent = "Foundation";
+      nav.appendChild(foundationLink);
+    }
+  }
+
   const languageButtons = [...document.querySelectorAll("[data-language]")];
   const translatable = [...document.querySelectorAll("[data-en][data-ru]")];
   const themeToggle = document.getElementById("theme-toggle");
@@ -20,9 +34,17 @@
       button.classList.toggle("active", button.dataset.language === lang);
       button.setAttribute("aria-pressed", String(button.dataset.language === lang));
     });
-    document.title = lang === "ru"
-      ? "Влад Мяхлов — инженер научного и приборного ПО"
-      : "Vlad Myahlov — Scientific Software & Instrumentation Engineer";
+
+    if (location.pathname.endsWith("foundation.html")) {
+      document.title = lang === "ru"
+        ? "Научная и STEM-основа — Влад Мяхлов"
+        : "Scientific & STEM Foundation — Vlad Myahlov";
+    } else {
+      document.title = lang === "ru"
+        ? "Влад Мяхлов — инженер научного и приборного ПО"
+        : "Vlad Myahlov — Scientific Software & Instrumentation Engineer";
+    }
+
     localStorage.setItem("portfolio-language", lang);
   }
 
