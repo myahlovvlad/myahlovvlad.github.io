@@ -1,0 +1,37 @@
+# Vlad Myahlov — Scientific Software & Instrumentation Engineer
+
+Canonical profile: https://myahlovvlad.github.io/
+GitHub: https://github.com/myahlovvlad
+ResearchGate: https://www.researchgate.net/profile/Vlad_Mahlov
+
+## Professional identity
+Vlad Myahlov works at the intersection of measurement science, scientific instrumentation, software architecture and verification. His core portfolio concerns UV-Vis instrument workflows, embedded HMI/FSM behaviour, scientific desktop software, hardware abstraction layers, measurement engines, laboratory automation, metrology and verification evidence.
+
+## Engineering narrative
+Measurement science → laboratory practice → scientific instrumentation → firmware/HMI → scientific software → verification.
+
+The distinguishing approach is verification-first engineering: requirements and software decisions are connected to real instrument behaviour, measurement quality, logs, test protocols, deviations, root-cause analysis, CAPA and retesting.
+
+## Flagship engineering areas
+- UV-Vis instrument productization and measurement workflows.
+- Embedded HMI/FSM specification and runtime-oriented interface tooling.
+- SpectroNex architecture: serial protocol → HAL → instrument state → measurement core → workflow engine → frontend.
+- FAT/OQ-related verification, metrology and traceability-oriented engineering evidence.
+- LCD-bitmap IDE: public HMI/FSM workbench for embedded monochrome displays.
+
+## Earlier scientific and educational foundation
+Before the current instrumentation/software focus, the professional trajectory included biotechnology, analytical chemistry, laboratory chemical analysis, STEM mentoring, WorldSkills/Professional skills competitions, technical administration, 3D CAD/prototyping, educational-method design, and public talks on AI/LLM-assisted education. These are presented as foundations of the current systems-engineering profile, not as a separate competing professional identity.
+
+## Public projects
+- LCD-bitmap IDE: https://github.com/myahlovvlad/LCD-bitmap-IDE
+- Q2SC Platform: https://github.com/myahlovvlad/q2sc-platform
+- BioCult-KB / Cultivation-collagenase: https://github.com/myahlovvlad/Cultivation-collagenase
+
+## Public profile links
+- VC.ru archive: https://vc.ru/u/87686-vlad-myahlov
+- ResearchGate: https://www.researchgate.net/profile/Vlad_Mahlov
+- Dzen archive: https://dzen.ru/digital_chemistry_lab
+- Earlier portfolio archive: https://vladmyahlovportfolio.tilda.ws/
+
+## Claim boundaries
+Employer-associated/private engineering work is described only at sanitized architecture and outcome level. Proprietary protocol details, firmware binaries, vendor materials and confidential implementation artifacts are excluded. Research prototypes are clearly separated from production claims.
