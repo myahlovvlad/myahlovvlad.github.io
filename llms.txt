@@ -6,40 +6,61 @@ ResearchGate: https://www.researchgate.net/profile/Vlad_Mahlov
 
 ## Professional identity
 
-Vlad Myahlov works at the intersection of measurement science, scientific instrumentation, embedded HMI, scientific software and verification engineering. The central engineering pattern is to translate physical measurement constraints and operator workflows into explicit software behaviour that can be simulated, tested and verified.
+Vlad Myahlov works at the intersection of measurement science, scientific instrumentation, embedded HMI, scientific software, verification engineering and evidence-oriented automation. The central pattern is to translate physical measurement constraints and operator workflows into explicit software behaviour that can be simulated, tested and verified.
 
 Primary domains:
-- scientific instrument software;
+- scientific instrument control software;
 - UV-Vis spectrophotometry and measurement workflows;
 - embedded HMI and finite-state-machine modelling;
-- hardware abstraction layers and instrument state;
-- measurement engines and workflow architecture;
-- hardware-in-the-loop verification, FAT/OQ-related testing and metrology;
-- laboratory automation;
-- local AI/MCP-assisted engineering tooling with explicit human-controlled specifications.
+- hardware abstraction and canonical instrument state;
+- verification / validation, FAT/OQ-related testing and metrology;
+- laboratory data workflows and controlled handoff;
+- firmware research and behavioural reconstruction;
+- local-first engineering automation with approval and evidence boundaries.
 
 ## Canonical pages
 
 - Home / positioning: https://myahlovvlad.github.io/
 - Engineering cases: https://myahlovvlad.github.io/cases/
-- Instrument productization: https://myahlovvlad.github.io/cases/instrument-productization.html
-- Embedded HMI engineering: https://myahlovvlad.github.io/cases/embedded-hmi.html
-- Scientific instrument control software: https://myahlovvlad.github.io/cases/instrument-control-software.html
+- Scientific instrument control software / SpectroNex case: https://myahlovvlad.github.io/cases/instrument-control-software.html
 - Verification-first engineering: https://myahlovvlad.github.io/cases/verification-engineering.html
+- Scientific instrument productization: https://myahlovvlad.github.io/cases/instrument-productization.html
+- Embedded HMI engineering: https://myahlovvlad.github.io/cases/embedded-hmi.html
+- Laboratory instrument data bridge: https://myahlovvlad.github.io/cases/spectrobridge.html
+- Measurement workflow and traceability: https://myahlovvlad.github.io/cases/measurement-workflow.html
+- Firmware research methodology: https://myahlovvlad.github.io/cases/firmware-research.html
+- Local-first engineering agent: https://myahlovvlad.github.io/cases/local-agent-os.html
 - Public projects: https://myahlovvlad.github.io/projects/
 - LCD Bitmap IDE: https://myahlovvlad.github.io/projects/lcd-bitmap-ide.html
+- Q2SC Platform: https://myahlovvlad.github.io/projects/q2sc.html
+- BioCult-KB: https://myahlovvlad.github.io/projects/biocult.html
+- CardVault: https://myahlovvlad.github.io/projects/cardvault.html
 - Scientific & STEM foundation: https://myahlovvlad.github.io/foundation/
 - Writing and research: https://myahlovvlad.github.io/writing/
 - Professional trajectory: https://myahlovvlad.github.io/about/
 
-## Featured public project
+## Public inspectable projects
 
-LCD Bitmap IDE is an offline desktop workbench for monochrome embedded HMI projects. Its public repository includes 128×64 LCD authoring, FSM navigation, physical button bindings, runtime preview, multilingual text registry, screen DSL, embedded exports and local REST/MCP automation. Electron and Tauri desktop builds are published for supported desktop platforms. Repository: https://github.com/myahlovvlad/LCD-bitmap-IDE
+### LCD Bitmap IDE
+Flagship public engineering proof. Offline workbench for monochrome embedded HMI with LCD authoring, FSM navigation, physical controls, runtime preview, embedded exports and local REST/MCP automation. Public repository: https://github.com/myahlovvlad/LCD-bitmap-IDE
+
+### Q2SC Platform
+Research-alpha computational chemistry and predictive-spectroscopy platform with PySCF quantum calculations, QSAR/QSPR, chemometrics and traceability-oriented architecture. Public repository: https://github.com/myahlovvlad/q2sc-platform
+
+### BioCult-KB
+Experimental bioprocess modelling and knowledge-system repository connecting cultivation context, process simulation, COBRA/SBML resources, OMICS inputs and documentation. Public repository: https://github.com/myahlovvlad/Cultivation-collagenase
+
+### CardVault
+Cross-platform OCR/contact-capture product prototype with human confirmation, local-first storage, QR/vCard exchange and desktop/mobile delivery work. Public repository: https://github.com/myahlovvlad/card-vault-tauri
+
+## Private / employer-associated work
+
+Private engineering work is represented only through sanitized portfolio case studies. The public site does not link private repositories and does not expose private source code, binaries, raw logs, device-specific confidential details, vendor files or unpublished operational data.
+
+The main private case families are scientific instrument control, laboratory data integration, measurement traceability, firmware research and local engineering automation.
 
 ## Claim boundaries
 
-Employer-associated and private engineering work is intentionally described only at sanitized architecture, workflow and outcome level. Public pages do not expose proprietary code, firmware binaries, private logs, confidential device identifiers, vendor-specific screen catalogs or confidential protocol details.
+Research prototypes are explicitly labelled by maturity and are not represented as production or scientifically validated systems unless public evidence supports that status. Strong claims are controlled through the site claim register.
 
-Research prototypes are explicitly labelled by maturity and should not be represented as production systems unless the relevant repository establishes that status.
-
-The older Tilda portfolio is a legacy evidence archive rather than a second canonical professional identity. Historical photographs and certificates should be migrated from original owned/licensed files or a proper export; the canonical site should not depend on Tilda lazy-load CDN placeholders.
+The older Tilda portfolio is a legacy evidence archive for earlier biotechnology, laboratory, STEM, CAD/3D and educational work rather than a second canonical professional identity. Historical media should be migrated only from original owned/licensed source files.
