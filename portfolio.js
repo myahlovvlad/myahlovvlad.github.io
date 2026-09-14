@@ -38,8 +38,8 @@
       ru: 'Verification-first engineering — Влад Мяхлов'
     },
     projects: {
-      en: 'Public Engineering Projects — Vlad Myahlov',
-      ru: 'Публичные инженерные проекты — Влад Мяхлов'
+      en: 'Engineering Projects — Vlad Myahlov',
+      ru: 'Инженерные проекты — Влад Мяхлов'
     },
     lcd: {
       en: 'LCD Bitmap IDE — Embedded HMI Workbench',
@@ -70,8 +70,8 @@
       button.classList.toggle('is-active', active);
       button.setAttribute('aria-pressed', String(active));
     });
-    const page = body.dataset.page || 'home';
-    if (titles[page]) document.title = titles[page][lang];
+    const page = body.dataset.page;
+    if (page && titles[page]) document.title = titles[page][lang];
     localStorage.setItem('portfolio-language', lang);
   };
 
