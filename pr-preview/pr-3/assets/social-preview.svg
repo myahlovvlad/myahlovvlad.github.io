@@ -1,0 +1,15 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="630" viewBox="0 0 1200 630" role="img" aria-labelledby="title desc">
+  <title id="title">Vlad Myahlov — Scientific Software &amp; Instrumentation Engineer</title>
+  <desc id="desc">Professional portfolio social preview focused on measurement science, instrumentation, software and verification.</desc>
+  <rect width="1200" height="630" fill="#111315"/>
+  <rect x="72" y="72" width="1056" height="486" rx="28" fill="#181b1f" stroke="#3c4249"/>
+  <text x="118" y="150" fill="#9aa3ad" font-family="Inter,Arial,sans-serif" font-size="26" letter-spacing="4">SCIENTIFIC SOFTWARE · INSTRUMENTATION · VERIFICATION</text>
+  <text x="118" y="258" fill="#f4f2ea" font-family="Inter,Arial,sans-serif" font-weight="700" font-size="64">Vlad Myahlov</text>
+  <text x="118" y="334" fill="#d6d9dc" font-family="Inter,Arial,sans-serif" font-size="38">Scientific Software &amp;</text>
+  <text x="118" y="382" fill="#d6d9dc" font-family="Inter,Arial,sans-serif" font-size="38">Instrumentation Engineer</text>
+  <text x="118" y="462" fill="#9aa3ad" font-family="ui-monospace,SFMono-Regular,Menlo,monospace" font-size="24">measurement → instrument → HMI/FSM → software → verification</text>
+  <g transform="translate(858 196)">
+    <rect width="202" height="202" rx="24" fill="#111315" stroke="#59616a"/>
+    <text x="101" y="124" text-anchor="middle" fill="#f4f2ea" font-family="Inter,Arial,sans-serif" font-weight="700" font-size="76">VM</text>
+  </g>
+</svg>
