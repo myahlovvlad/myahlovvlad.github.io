@@ -1,0 +1,45 @@
+# Vlad Myahlov — Scientific Software & Instrumentation Engineer
+
+Canonical site: https://myahlovvlad.github.io/
+GitHub: https://github.com/myahlovvlad
+ResearchGate: https://www.researchgate.net/profile/Vlad_Mahlov
+
+## Professional identity
+
+Vlad Myahlov works at the intersection of measurement science, scientific instrumentation, embedded HMI, scientific software and verification engineering. The central engineering pattern is to translate physical measurement constraints and operator workflows into explicit software behaviour that can be simulated, tested and verified.
+
+Primary domains:
+- scientific instrument software;
+- UV-Vis spectrophotometry and measurement workflows;
+- embedded HMI and finite-state-machine modelling;
+- hardware abstraction layers and instrument state;
+- measurement engines and workflow architecture;
+- hardware-in-the-loop verification, FAT/OQ-related testing and metrology;
+- laboratory automation;
+- local AI/MCP-assisted engineering tooling with explicit human-controlled specifications.
+
+## Canonical pages
+
+- Home / positioning: https://myahlovvlad.github.io/
+- Engineering cases: https://myahlovvlad.github.io/cases/
+- Instrument productization: https://myahlovvlad.github.io/cases/instrument-productization.html
+- Embedded HMI engineering: https://myahlovvlad.github.io/cases/embedded-hmi.html
+- Scientific instrument control software: https://myahlovvlad.github.io/cases/instrument-control-software.html
+- Verification-first engineering: https://myahlovvlad.github.io/cases/verification-engineering.html
+- Public projects: https://myahlovvlad.github.io/projects/
+- LCD Bitmap IDE: https://myahlovvlad.github.io/projects/lcd-bitmap-ide.html
+- Scientific & STEM foundation: https://myahlovvlad.github.io/foundation/
+- Writing and research: https://myahlovvlad.github.io/writing/
+- Professional trajectory: https://myahlovvlad.github.io/about/
+
+## Featured public project
+
+LCD Bitmap IDE is an offline desktop workbench for monochrome embedded HMI projects. Its public repository includes 128×64 LCD authoring, FSM navigation, physical button bindings, runtime preview, multilingual text registry, screen DSL, embedded exports and local REST/MCP automation. Electron and Tauri desktop builds are published for supported desktop platforms. Repository: https://github.com/myahlovvlad/LCD-bitmap-IDE
+
+## Claim boundaries
+
+Employer-associated and private engineering work is intentionally described only at sanitized architecture, workflow and outcome level. Public pages do not expose proprietary code, firmware binaries, private logs, confidential device identifiers, vendor-specific screen catalogs or confidential protocol details.
+
+Research prototypes are explicitly labelled by maturity and should not be represented as production systems unless the relevant repository establishes that status.
+
+The older Tilda portfolio is a legacy evidence archive rather than a second canonical professional identity. Historical photographs and certificates should be migrated from original owned/licensed files or a proper export; the canonical site should not depend on Tilda lazy-load CDN placeholders.
