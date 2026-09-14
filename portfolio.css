@@ -111,6 +111,11 @@ button, a, article, .card, .case-card, .project-card, .chip, .nav-link { transit
 .language-button { border: 0; border-radius: 0; padding-inline: .6rem; font: 500 .68rem var(--mono); }
 .language-button.is-active { background: var(--ink); color: var(--bg); }
 
+/* Compact case/project pages intentionally omit the hamburger control. Keep their navigation visible and scrollable on small screens. */
+.header-inner:not(:has(.nav-toggle)) { flex-wrap: wrap; padding-block: .6rem; }
+.header-inner:not(:has(.nav-toggle)) .primary-nav { position: static; inset: auto; display: flex; flex-wrap: wrap; gap: .2rem; padding: 0; border: 0; border-radius: 0; background: transparent; box-shadow: none; margin-left: auto; }
+.header-inner:not(:has(.nav-toggle)) .primary-nav a { padding: .55rem .65rem; }
+
 .eyebrow, .kicker, .meta, .tag, .number, .breadcrumb { font-family: var(--mono); text-transform: uppercase; letter-spacing: .1em; }
 .eyebrow, .kicker { color: var(--accent); font-size: .72rem; font-weight: 500; margin: 0 0 1rem; }
 .breadcrumb { display: flex; flex-wrap: wrap; gap: .45rem; color: var(--muted); font-size: .67rem; margin-bottom: 2rem; }
@@ -260,6 +265,11 @@ p { margin: 0; color: var(--muted); }
 [data-reveal] { opacity: 0; transform: translateY(1.25rem); will-change: opacity, transform; }
 [data-reveal].is-visible { animation: reveal .75s var(--ease-out) forwards; }
 @keyframes reveal { to { opacity: 1; transform: translateY(0); } }
+
+@media (max-width: 63.999rem) {
+  .header-inner:not(:has(.nav-toggle)) .primary-nav { order: 3; width: 100%; flex-wrap: nowrap; overflow-x: auto; overscroll-behavior-inline: contain; scrollbar-width: thin; }
+  .header-inner:not(:has(.nav-toggle)) .primary-nav a { white-space: nowrap; }
+}
 
 @media (min-width: 40rem) {
   .shell { width: min(calc(100% - 3rem), var(--max)); }
