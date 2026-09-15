@@ -14,8 +14,8 @@
 
   const titles = {
     home: {
-      en: 'Vlad Myahlov — Scientific Software & Instrumentation Engineer',
-      ru: 'Влад Мяхлов — инженер научного и приборного ПО'
+      en: 'Vlad Myahlov — Scientific Software, Instrumentation & Validation Engineer',
+      ru: 'Влад Мяхлов — инженер научного, приборного и валидационного ПО'
     },
     cases: {
       en: 'Engineering Cases — Vlad Myahlov',
