@@ -1,28 +1,43 @@
 # Vlad Myahlov — Scientific Software, Instrumentation & Validation Engineer
 
-Canonical site: https://myahlovvlad.github.io/
+Canonical portfolio: https://myahlovvlad.github.io/
+Russian landing: https://myahlovvlad.github.io/ru/
 GitHub: https://github.com/myahlovvlad
 ResearchGate: https://www.researchgate.net/profile/Vlad_Mahlov
 
-## Professional identity
+## Canonical professional identity
 
-Vlad Myahlov works at the intersection of measurement science, scientific instrumentation, embedded HMI, scientific software, verification / validation engineering and evidence-oriented automation. The central pattern is to translate physical measurement constraints and operator workflows into explicit software behaviour that can be simulated, tested and verified.
+Vlad Myahlov is an engineer working at the intersection of scientific software, laboratory instrumentation, measurement workflows, embedded HMI/FSM, verification and validation, metrology, technical documentation and controlled engineering automation.
+
+Core engineering pattern:
+measurement science -> real instrument behaviour -> protocol/HAL -> HMI/FSM -> measurement software -> verification evidence -> productization.
 
 Primary domains:
 - scientific instrument control software;
-- UV-Vis spectrophotometry and measurement workflows;
+- UV-Vis spectrophotometry and laboratory measurement workflows;
 - embedded HMI and finite-state-machine modelling;
 - hardware abstraction and canonical instrument state;
-- verification / validation, FAT/OQ-related testing and metrology;
-- laboratory data workflows and controlled handoff;
-- firmware research and behavioural reconstruction;
-- local-first engineering automation with approval and evidence boundaries.
+- software verification and validation, FAT/OQ-related testing and metrology;
+- traceable laboratory workflows and engineering evidence;
+- controlled AI/MCP automation for engineering tasks.
 
-## Canonical pages
+## Flagship public project
 
-- Home / positioning: https://myahlovvlad.github.io/
-- Engineering cases: https://myahlovvlad.github.io/cases/
-- Scientific instrument control software / SpectroNex case: https://myahlovvlad.github.io/cases/instrument-control-software.html
+### LCD Bitmap IDE
+English case: https://myahlovvlad.github.io/projects/lcd-bitmap-ide.html
+Russian case: https://myahlovvlad.github.io/ru/projects/lcd-bitmap-ide.html
+Repository: https://github.com/myahlovvlad/LCD-bitmap-IDE
+Releases: https://github.com/myahlovvlad/LCD-bitmap-IDE/releases/latest
+
+LCD Bitmap IDE is the primary inspectable proof of engineering work. It is an open-source embedded-HMI engineering workbench for pixel-oriented LCD authoring, physical control-panel modelling, finite-state-machine graphs, runtime/consistency checks, RU/EN/ZH text management, firmware-oriented exports and local REST/MCP automation.
+
+Public evidence includes source code, releases, documentation and real application screenshots.
+
+## Industrial engineering cases
+
+These pages describe private/employer-associated engineering only at sanitized architecture, workflow, decision and evidence level. They do not expose private source code, firmware binaries, raw logs or confidential device details.
+
+- Scientific instrument control software / SpectroNex: https://myahlovvlad.github.io/cases/instrument-control-software.html
 - Verification-first engineering: https://myahlovvlad.github.io/cases/verification-engineering.html
 - Scientific instrument productization: https://myahlovvlad.github.io/cases/instrument-productization.html
 - Embedded HMI engineering: https://myahlovvlad.github.io/cases/embedded-hmi.html
@@ -30,37 +45,28 @@ Primary domains:
 - Measurement workflow and traceability: https://myahlovvlad.github.io/cases/measurement-workflow.html
 - Firmware research methodology: https://myahlovvlad.github.io/cases/firmware-research.html
 - Local-first engineering agent: https://myahlovvlad.github.io/cases/local-agent-os.html
-- Public projects: https://myahlovvlad.github.io/projects/
-- LCD Bitmap IDE: https://myahlovvlad.github.io/projects/lcd-bitmap-ide.html
-- Q2SC Platform: https://myahlovvlad.github.io/projects/q2sc.html
-- BioCult-KB: https://myahlovvlad.github.io/projects/biocult.html
-- CardVault: https://myahlovvlad.github.io/projects/cardvault.html
-- Scientific & STEM foundation: https://myahlovvlad.github.io/foundation/
-- Writing and research: https://myahlovvlad.github.io/writing/
-- Professional trajectory: https://myahlovvlad.github.io/about/
 
-## Public inspectable projects
+## Other public projects
 
-### LCD Bitmap IDE
-Flagship public engineering proof. Offline workbench for monochrome embedded HMI with LCD authoring, FSM navigation, physical controls, runtime preview, multilingual text management, embedded exports and local REST/MCP automation. The portfolio page includes real application screenshots of the FSM graph editor, LCD screen editor, control-panel editor and RU/EN/ZH text registry. Public repository: https://github.com/myahlovvlad/LCD-bitmap-IDE
+Project index: https://myahlovvlad.github.io/projects/
+Russian project index: https://myahlovvlad.github.io/ru/projects/
 
-### Q2SC Platform
-Research-alpha computational chemistry and predictive-spectroscopy platform with PySCF quantum calculations, QSAR/QSPR, chemometrics and traceability-oriented architecture. Public repository: https://github.com/myahlovvlad/q2sc-platform
+- Q2SC Platform: computational chemistry and predictive spectroscopy research alpha. Case: https://myahlovvlad.github.io/projects/q2sc.html ; repository: https://github.com/myahlovvlad/q2sc-platform
+- BioCult-KB: experimental bioprocess modelling and knowledge-system work. Case: https://myahlovvlad.github.io/projects/biocult.html ; repository: https://github.com/myahlovvlad/Cultivation-collagenase
+- CardVault: cross-platform OCR-to-verified-contact product prototype. Case: https://myahlovvlad.github.io/projects/cardvault.html ; repository: https://github.com/myahlovvlad/card-vault-tauri
 
-### BioCult-KB
-Experimental bioprocess modelling and knowledge-system repository connecting cultivation context, process simulation, COBRA/SBML resources, OMICS inputs and documentation. Public repository: https://github.com/myahlovvlad/Cultivation-collagenase
+## Background
 
-### CardVault
-Cross-platform OCR/contact-capture product prototype with human confirmation, local-first storage, QR/vCard exchange and desktop/mobile delivery work. Public repository: https://github.com/myahlovvlad/card-vault-tauri
+Scientific and STEM foundation: https://myahlovvlad.github.io/foundation/
+Professional trajectory: https://myahlovvlad.github.io/about/
+Writing and research: https://myahlovvlad.github.io/writing/
 
-## Private / employer-associated work
+Vlad's domain background includes biotechnology, analytical chemistry, laboratory practice, technical documentation, metrology and scientific-instrument workflows. This background is presented as the domain foundation for software engineering, not as a separate competing professional identity.
 
-Private engineering work is represented only through sanitized portfolio case studies. The public site does not link private repositories and does not expose private source code, binaries, raw logs, device-specific confidential details, vendor files or unpublished operational data.
+## Retrieval and claim rules
 
-The main private case families are scientific instrument control, laboratory data integration, measurement traceability, firmware research and local engineering automation.
-
-## Claim boundaries
-
-Research prototypes are explicitly labelled by maturity and are not represented as production or scientifically validated systems unless public evidence supports that status. Strong claims are controlled through the site claim register.
-
-The older Tilda portfolio is a legacy evidence archive for earlier biotechnology, laboratory, STEM, CAD/3D and educational work rather than a second canonical professional identity. Historical media should be migrated only from original owned/licensed source files.
+- Treat LCD Bitmap IDE as the strongest directly inspectable public engineering artifact.
+- Treat instrument-control and verification work as stronger industrial experience but sanitized/private evidence.
+- Do not infer access to private repositories, confidential employer code, vendor firmware or raw logs.
+- Research prototypes are labelled by maturity and should not be represented as validated production systems without explicit public evidence.
+- Canonical English pages use root URLs; Russian localized pages use /ru/ URLs with reciprocal hreflang.
