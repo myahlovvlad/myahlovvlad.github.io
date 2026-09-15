@@ -1,4 +1,4 @@
-# Vlad Myahlov — Scientific Software & Instrumentation Engineer
+# Vlad Myahlov — Scientific Software, Instrumentation & Validation Engineer
 
 Canonical site: https://myahlovvlad.github.io/
 GitHub: https://github.com/myahlovvlad
@@ -6,7 +6,7 @@ ResearchGate: https://www.researchgate.net/profile/Vlad_Mahlov
 
 ## Professional identity
 
-Vlad Myahlov works at the intersection of measurement science, scientific instrumentation, embedded HMI, scientific software, verification engineering and evidence-oriented automation. The central pattern is to translate physical measurement constraints and operator workflows into explicit software behaviour that can be simulated, tested and verified.
+Vlad Myahlov works at the intersection of measurement science, scientific instrumentation, embedded HMI, scientific software, verification / validation engineering and evidence-oriented automation. The central pattern is to translate physical measurement constraints and operator workflows into explicit software behaviour that can be simulated, tested and verified.
 
 Primary domains:
 - scientific instrument control software;
@@ -42,7 +42,7 @@ Primary domains:
 ## Public inspectable projects
 
 ### LCD Bitmap IDE
-Flagship public engineering proof. Offline workbench for monochrome embedded HMI with LCD authoring, FSM navigation, physical controls, runtime preview, embedded exports and local REST/MCP automation. Public repository: https://github.com/myahlovvlad/LCD-bitmap-IDE
+Flagship public engineering proof. Offline workbench for monochrome embedded HMI with LCD authoring, FSM navigation, physical controls, runtime preview, multilingual text management, embedded exports and local REST/MCP automation. The portfolio page includes real application screenshots of the FSM graph editor, LCD screen editor, control-panel editor and RU/EN/ZH text registry. Public repository: https://github.com/myahlovvlad/LCD-bitmap-IDE
 
 ### Q2SC Platform
 Research-alpha computational chemistry and predictive-spectroscopy platform with PySCF quantum calculations, QSAR/QSPR, chemometrics and traceability-oriented architecture. Public repository: https://github.com/myahlovvlad/q2sc-platform
