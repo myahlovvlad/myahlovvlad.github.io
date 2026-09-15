@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:image="http://www.google.com/schemas/sitemap-image/1.1">
+  <url>
+    <loc>https://myahlovvlad.github.io/projects/lcd-bitmap-ide.html</loc>
+    <image:image><image:loc>https://myahlovvlad.github.io/assets/projects/lcd-bitmap-ide/fsm-graph-editor.webp</image:loc><image:title>LCD Bitmap IDE FSM graph editor</image:title><image:caption>Finite-state-machine graph with instrument states, transitions and subsystem navigation.</image:caption></image:image>
+    <image:image><image:loc>https://myahlovvlad.github.io/assets/projects/lcd-bitmap-ide/lcd-editor.webp</image:loc><image:title>LCD Bitmap IDE screen editor</image:title><image:caption>Pixel-oriented 128 by 64 LCD authoring with state binding and validation.</image:caption></image:image>
+    <image:image><image:loc>https://myahlovvlad.github.io/assets/projects/lcd-bitmap-ide/control-panel-editor.webp</image:loc><image:title>LCD Bitmap IDE control panel editor</image:title><image:caption>Physical control-panel layout and FSM event mapping.</image:caption></image:image>
+    <image:image><image:loc>https://myahlovvlad.github.io/assets/projects/lcd-bitmap-ide/text-registry.webp</image:loc><image:title>LCD Bitmap IDE multilingual text registry</image:title><image:caption>RU, EN and ZH text registry with translation completeness tracking.</image:caption></image:image>
+  </url>
+  <url>
+    <loc>https://myahlovvlad.github.io/ru/projects/lcd-bitmap-ide.html</loc>
+    <image:image><image:loc>https://myahlovvlad.github.io/assets/projects/lcd-bitmap-ide/fsm-graph-editor.webp</image:loc><image:title>Редактор FSM-графа LCD Bitmap IDE</image:title></image:image>
+    <image:image><image:loc>https://myahlovvlad.github.io/assets/projects/lcd-bitmap-ide/lcd-editor.webp</image:loc><image:title>Редактор LCD-экранов LCD Bitmap IDE</image:title></image:image>
+  </url>
+</urlset>
