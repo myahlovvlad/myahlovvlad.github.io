@@ -1,3 +1,5 @@
 User-agent: *
 Allow: /
 Sitemap: https://myahlovvlad.github.io/sitemap.xml
+
+# Static portfolio: canonical production site
