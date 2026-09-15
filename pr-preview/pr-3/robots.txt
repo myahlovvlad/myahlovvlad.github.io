@@ -1,8 +1,0 @@
-User-agent: *
-Allow: /
-Disallow: /pr-preview/
-
-Sitemap: https://myahlovvlad.github.io/sitemap.xml
-Sitemap: https://myahlovvlad.github.io/sitemap-images.xml
-
-# Canonical production portfolio. Pull-request previews are intentionally excluded from indexing.
