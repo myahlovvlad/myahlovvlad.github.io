@@ -1,0 +1,21 @@
+name: Notify search indexes
+
+on:
+  push:
+    branches: [main]
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  notify:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v6
+      - name: Notify IndexNow
+        run: |
+          KEY=$(cat 0b3202d8d9c6eca67a6691ccbd19fd4d.txt)
+          curl --fail --silent --show-error "https://api.indexnow.org/indexnow?url=https%3A%2F%2Fmyahlovvlad.github.io%2F&key=${KEY}"
+          curl --fail --silent --show-error "https://api.indexnow.org/indexnow?url=https%3A%2F%2Fmyahlovvlad.github.io%2Fprojects%2Flcd-bitmap-ide.html&key=${KEY}"
+          curl --fail --silent --show-error "https://api.indexnow.org/indexnow?url=https%3A%2F%2Fmyahlovvlad.github.io%2Fru%2F&key=${KEY}"
