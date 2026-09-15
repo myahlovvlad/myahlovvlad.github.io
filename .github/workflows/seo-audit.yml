@@ -1,0 +1,27 @@
+name: SEO and media audit
+
+on:
+  pull_request:
+    paths:
+      - '**.html'
+      - '**.xml'
+      - 'robots.txt'
+      - 'llms.txt'
+      - 'assets/projects/lcd-bitmap-ide/**'
+      - 'scripts/seo_check.py'
+      - '.github/workflows/seo-audit.yml'
+  push:
+    branches: [main]
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  validate:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v6
+      - name: Validate localized SEO and media
+        run: python scripts/seo_check.py
